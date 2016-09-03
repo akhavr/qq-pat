@@ -484,7 +484,7 @@ class Analizer:
             cov_mat = pd.DataFrame(covariance.ledoit_wolf(returns)[0]) 
         elif covarianceType == OAS:
             cov_mat = pd.DataFrame(covariance.oas(returns)[0]) 
-        elif covarainceType == SHRUNK_SAMPLE_COVARIANCE:       
+        elif covarianceType == SHRUNK_SAMPLE_COVARIANCE:       
             cov_mat = pd.DataFrame(covariance.shrunk_covariance(returns.cov()))
             
         if covarianceType != SAMPLE_COVARIANCE and covarianceType != LEDOIT_WOLF and covarianceType != OAS and covarianceType != SHRUNK_SAMPLE_COVARIANCE:
